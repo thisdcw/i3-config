@@ -1,0 +1,35 @@
+#Colors (Snazzy)
+colors:
+  primary:
+    background: '0x1b2b34'
+    foreground: '0xeff0eb'
+  normal:
+    black: '0x282a36'
+    red:   '0xff5c57'
+    green: '0x5af78e'
+    yellow: '0xf3f99d'
+    blue: '0x57c7ff'
+    magenta: '0xff6ac1'
+    cyan: '0x9aedfe'
+    white: '0xf1f1f0'
+  bright:
+    black: '0x686868'
+    red: '0xff5c57'
+    green: '0x5af78e'
+    yellow: '0xf3f99d'
+    blue: '0x57c7ff'
+    magenta: '0xff6ac1'
+    cyan: '0x9aedf'
+    white: '0xf1f1f0'
+
+font:
+  normal:
+    family: Deja Sans Mono
+  bold:
+    family: Deja Sans Mono
+  italic:
+    family: Deja Sans Mono
+  size: 10
+
+window:
+  opacity: 0.60

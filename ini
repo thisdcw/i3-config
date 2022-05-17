@@ -1,0 +1,42 @@
+let mapleader=" "
+syntax on
+set number
+set norelativenumber
+set cursorline
+set wrap
+set showcmd
+set wildmenu
+set hlsearch
+set incsearch
+exec "nohlsearch"
+set ignorecase
+set smartcase
+set tabstop=4
+
+noremap = nzz
+noremap - Nzz
+noremap <LEADER><CR> :nohlsearch<CR>
+noremap <A-b> :MarkdownPreviewToggel<CR>
+
+filetype on
+filetype indent on
+syntax enable
+
+call plug#begin('~/.vim/plugged')
+Plug 'vim-airline/vim-airline'
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
+Plug 'mzlogin/vim-markdown-toc'
+Plug 'iamcco/markdown-preview.nvim'
+call plug#end()
+let g:vim_markdown_math = 1
+let g:vmt_auto_update_on_save = 0
+
+function RToc()
+	exe "/-toc .* -->"
+	let lstart=line('.')
+	exe "/-toc -->"
+	let lnum=line('.')
+	execute lstart.",".lnum."g/		/d
+endfunction
+let g:mkdp_path_to_chrome = "~/.config/chromium"
